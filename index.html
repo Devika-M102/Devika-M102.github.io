@@ -4,8 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Devika M's Data Analyst and Business Analyst portfolio featuring data analysis, dashboards, and business problem-solving projects.">
+
+  <meta name="description" content="Devika M's portfolio showcasing data analytics, business analysis, data visualization, and practical projects.">
+
   <title>Devika M | Data & Business Analyst Portfolio</title>
+
   <style>
     :root {
       --bg: #f7f9fc;
@@ -17,19 +20,26 @@
       --border: #e2e8f0;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
-      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      font-family: "Segoe UI", Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.7;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     .container {
       width: min(1080px, 90%);
@@ -37,7 +47,7 @@
     }
 
     header {
-      background: rgba(255, 255, 255, 0.96);
+      background: rgba(255, 255, 255, 0.97);
       border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
@@ -55,10 +65,13 @@
     .brand {
       font-weight: 800;
       color: var(--navy);
-      font-size: 1.15rem;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
     }
 
-    .brand span { color: var(--teal); }
+    .brand span {
+      color: var(--teal);
+    }
 
     .nav-links {
       display: flex;
@@ -67,11 +80,13 @@
       font-size: 0.92rem;
     }
 
-    .nav-links a:hover { color: var(--teal); }
+    .nav-links a:hover {
+      color: var(--teal);
+    }
 
     .hero {
-      padding: 96px 0 84px;
-      background: linear-gradient(135deg, #edf5fb, #f7f9fc 65%);
+      padding: 100px 0 90px;
+      background: linear-gradient(135deg, #eaf3fb, #f7f9fc 70%);
     }
 
     .eyebrow {
@@ -84,17 +99,19 @@
 
     h1 {
       color: var(--navy);
-      font-size: clamp(2.4rem, 6vw, 4.4rem);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
       line-height: 1.12;
       letter-spacing: -2px;
-      max-width: 780px;
-      margin: 16px 0;
+      max-width: 800px;
+      margin: 18px 0;
     }
 
-    h1 span { color: var(--teal); }
+    h1 span {
+      color: var(--teal);
+    }
 
     .hero p {
-      max-width: 650px;
+      max-width: 660px;
       font-size: 1.1rem;
       color: var(--muted);
     }
@@ -103,15 +120,20 @@
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      margin-top: 28px;
+      margin-top: 30px;
     }
 
     .btn {
       display: inline-block;
-      padding: 12px 20px;
+      padding: 12px 21px;
       border-radius: 8px;
       font-weight: 700;
       border: 1px solid var(--navy);
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
     }
 
     .btn-primary {
@@ -124,65 +146,91 @@
       color: var(--navy);
     }
 
-    section { padding: 72px 0; }
+    section {
+      padding: 76px 0;
+      scroll-margin-top: 85px;
+    }
 
     .section-heading {
       color: var(--navy);
       font-size: 2rem;
-      margin: 0 0 8px;
+      line-height: 1.3;
+      margin: 0 0 10px;
       letter-spacing: -0.7px;
     }
 
     .section-intro {
       color: var(--muted);
-      margin: 0 0 30px;
-      max-width: 680px;
+      margin: 0 0 32px;
+      max-width: 700px;
     }
 
-    .about-panel, .project-card, .skill-card, .contact-panel {
+    .about-panel,
+    .project-card,
+    .skill-card,
+    .contact-panel {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 14px;
     }
 
-    .about-panel { padding: 28px; }
+    .about-panel {
+      padding: 30px;
+    }
 
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
     }
 
-    .skill-card { padding: 22px; }
+    .skill-card {
+      padding: 24px;
+    }
 
-    .skill-card h3, .project-card h3 {
+    .skill-card h3,
+    .project-card h3 {
       color: var(--navy);
-      margin: 0 0 8px;
+      line-height: 1.4;
+      margin: 0 0 10px;
+      font-size: 1.2rem;
     }
 
-    .skill-card p, .project-card p { margin: 0; }
+    .skill-card p,
+    .project-card p {
+      margin: 0;
+      color: var(--muted);
+    }
 
-    #projects { background: #eef3f8; }
+    #projects {
+      background: #eef3f8;
+    }
 
     .project-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
+      gap: 22px;
     }
 
     .project-card {
-      padding: 26px;
+      padding: 28px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 14px;
+      gap: 15px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(20, 36, 59, 0.07);
     }
 
     .project-type {
       color: var(--teal);
       text-transform: uppercase;
-      letter-spacing: 1.2px;
-      font-size: 0.74rem;
+      letter-spacing: 1.4px;
+      font-size: 0.75rem;
       font-weight: 800;
     }
 
@@ -195,30 +243,38 @@
     .tag {
       background: #eaf6f5;
       color: #087c77;
-      padding: 4px 10px;
+      padding: 4px 11px;
       border-radius: 20px;
       font-size: 0.8rem;
     }
 
     .project-link {
+      display: inline-block;
       color: var(--teal);
       font-weight: 800;
       margin-top: auto;
+      padding-top: 4px;
     }
 
-    .project-link:hover { text-decoration: underline; }
+    .project-link:hover {
+      text-decoration: underline;
+    }
 
-    .contact-panel { padding: 30px; }
+    .contact-panel {
+      padding: 34px;
+    }
 
     .contact-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 18px;
+      gap: 22px;
+      margin-top: 22px;
       font-weight: 700;
     }
 
-    .contact-links a { color: var(--teal); }
+    .contact-links a {
+      color: var(--teal);
+    }
 
     footer {
       padding: 26px 0;
@@ -234,23 +290,38 @@
         padding: 16px 0;
       }
 
-      .nav-links { gap: 12px 18px; }
+      .nav-links {
+        gap: 10px 18px;
+      }
 
-      .hero { padding: 68px 0; }
+      .hero {
+        padding: 70px 0;
+      }
 
-      .skills-grid, .project-grid {
+      .skills-grid,
+      .project-grid {
         grid-template-columns: 1fr;
       }
 
-      section { padding: 54px 0; }
+      section {
+        padding: 55px 0;
+      }
+
+      .about-panel,
+      .project-card,
+      .contact-panel {
+        padding: 23px;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <header>
     <nav class="container">
       <a class="brand" href="#home">DEVIKA<span>.</span></a>
+
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -261,154 +332,298 @@
   </header>
 
   <main>
+
+    <!-- HOME -->
     <section class="hero" id="home">
       <div class="container">
-        <div class="eyebrow">Data Analysis · Business Insights</div>
-        <h1>Turning data into <span>meaningful insights.</span></h1>
-        <p>
-          Hi, I'm Devika M. I'm a Mathematics graduate building practical
-          skills in data analysis and business problem-solving through
-          hands-on projects, reporting, and data-driven insights.
-        </p>
-        <div class="actions">
-          <a class="btn btn-primary" href="#projects">Explore My Projects</a>
-          <a class="btn btn-secondary" href="https://github.com/Devika-M102">GitHub Profile</a>
+
+        <div class="eyebrow">
+          Data Analytics · Business Insights
         </div>
+
+        <h1>
+          Turning data into
+          <span>meaningful insights.</span>
+        </h1>
+
+        <p>
+          Hi, I'm Devika M. I'm a Mathematics graduate developing
+          practical skills in data analytics and business analysis.
+          Through hands-on projects, I explore data, communicate
+          findings, and work toward turning business questions into
+          meaningful insights.
+        </p>
+
+        <div class="actions">
+          <a class="btn btn-primary" href="#projects">
+            Explore My Projects
+          </a>
+
+          <a
+            class="btn btn-secondary"
+            href="https://github.com/Devika-M102"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub Profile ↗
+          </a>
+        </div>
+
       </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about">
       <div class="container">
+
         <h2 class="section-heading">About Me</h2>
+
         <p class="section-intro">
-          A quantitative background, a curiosity for data, and an interest
-          in turning business questions into practical solutions.
+          A quantitative background, a curiosity for data, and
+          an interest in solving practical business problems.
         </p>
+
         <div class="about-panel">
-          I hold a B.Sc. in Mathematics and am pursuing an M.Sc. in
-          Mathematics through distance education. My experience in data
-          and reporting support introduced me to maintaining accurate
-          records, working with spreadsheets, and supporting people with
-          their queries. I'm developing my analytical toolkit through
-          hands-on projects in data analysis and business reporting.
+          I hold a B.Sc. in Mathematics and am pursuing an M.Sc.
+          in Mathematics through distance education at the
+          University of Kerala. I also hold a PGDCA qualification.
+
+          <br><br>
+
+          My experience in data and reporting support introduced
+          me to spreadsheet-based record management, data entry,
+          reporting, and user query resolution. I am strengthening
+          my analytical skills through practical projects in
+          customer segmentation, data visualization, and
+          business-focused analysis.
         </div>
+
       </div>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills">
       <div class="container">
+
         <h2 class="section-heading">Skills & Tools</h2>
+
         <p class="section-intro">
-          Tools and capabilities I use while developing practical
-          analytics and business analysis experience.
+          Technical skills and analytical capabilities developed
+          through learning and hands-on project work.
         </p>
+
         <div class="skills-grid">
+
           <article class="skill-card">
             <h3>Data Analysis</h3>
-            <p>SQL, Excel, data cleaning, exploratory analysis, and descriptive statistics.</p>
+            <p>
+              SQL, Excel, data cleaning, exploratory data analysis,
+              descriptive statistics, and customer segmentation.
+            </p>
           </article>
+
           <article class="skill-card">
             <h3>Visualization & Reporting</h3>
-            <p>Power BI fundamentals, Excel reporting, charts, and KPI presentation.</p>
+            <p>
+              Power BI fundamentals, Tableau project experience,
+              Excel reporting, charts, and data presentation.
+            </p>
           </article>
+
           <article class="skill-card">
             <h3>Business Analysis</h3>
-            <p>Problem-solving, identifying patterns, communicating findings, and reporting support.</p>
+            <p>
+              Problem-solving, interpreting data, identifying
+              patterns, maintaining accurate records, and
+              communicating findings.
+            </p>
           </article>
+
         </div>
       </div>
     </section>
 
+    <!-- PROJECTS -->
     <section id="projects">
       <div class="container">
+
         <h2 class="section-heading">Featured Projects</h2>
+
         <p class="section-intro">
-          Selected projects and virtual experiences demonstrating my
-          approach to analysis, reporting, and business problems.
+          Selected analytics projects and virtual experiences
+          demonstrating my approach to data, reporting, and
+          business problem-solving.
         </p>
 
         <div class="project-grid">
+
+          <!-- PROJECT 1: NETFLIX -->
           <article class="project-card">
-            <div class="project-type">Data Analytics</div>
+
+            <div class="project-type">Data Analytics · In Progress</div>
+
             <h3>Netflix Data Analysis</h3>
+
             <p>
-              An ongoing analysis of Netflix titles, including data
-              cleaning and exploration of content trends.
+              An ongoing project exploring Netflix titles,
+              preparing and cleaning data, and investigating
+              content distribution and trends.
             </p>
+
             <div class="tags">
               <span class="tag">Excel</span>
               <span class="tag">SQL</span>
               <span class="tag">Power BI</span>
             </div>
-            <a class="project-link" href="#contact">Project link coming soon →</a>
+
+            <a
+              class="project-link"
+              href="https://github.com/Devika-M102"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Explore GitHub Profile ↗
+            </a>
+
           </article>
 
+          <!-- PROJECT 2: E-COMMERCE -->
           <article class="project-card">
+
             <div class="project-type">Customer Analytics</div>
+
             <h3>E-commerce Revenue & Customer Segmentation</h3>
+
             <p>
-              An analysis project exploring e-commerce performance and
-              customer segments to support business decisions.
+              An e-commerce analysis project using RFM-based
+              customer segmentation to explore customer behavior
+              and support business-focused insights.
             </p>
+
             <div class="tags">
-              <span class="tag">Data Analysis</span>
-              <span class="tag">Customer Insights</span>
+              <span class="tag">RFM Analysis</span>
+              <span class="tag">Customer Analytics</span>
+              <span class="tag">Business Insights</span>
             </div>
-           <a class="project-link" href="https://github.com/Devika-M102/E-Commerce-RFM-Analysis" target="_blank" rel="noopener noreferrer">View Project on GitHub ↗</a>
+
+            <a
+              class="project-link"
+              href="https://github.com/Devika-M102/E-Commerce-RFM-Analysis"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Project on GitHub ↗
+            </a>
+
           </article>
 
+          <!-- PROJECT 3: TATA -->
           <article class="project-card">
+
             <div class="project-type">Virtual Experience</div>
+
             <h3>Tata GenAI Data Analytics</h3>
+
             <p>
-              A virtual experience covering exploratory analysis,
-              predictive modeling, stakeholder reporting, and an AI
-              collections presentation.
+              A Forage virtual experience covering exploratory
+              data analysis, predictive modeling, stakeholder
+              reporting, and an autonomous AI collections
+              presentation.
             </p>
+
             <div class="tags">
               <span class="tag">EDA</span>
+              <span class="tag">Predictive Modeling</span>
               <span class="tag">Reporting</span>
               <span class="tag">GenAI</span>
             </div>
-            <a class="project-link" href="https://github.com/Devika-M102/tata-genai-data-analytics" target="_blank" rel="noopener noreferrer">View on GitHub ↗</a>
+
+            <a
+              class="project-link"
+              href="https://github.com/Devika-M102/tata-genai-data-analytics"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Project on GitHub ↗
+            </a>
+
           </article>
 
+          <!-- PROJECT 4: DELOITTE -->
           <article class="project-card">
-            <div class="project-type">Business Analysis</div>
+
+            <div class="project-type">Virtual Experience</div>
+
             <h3>Deloitte Data Analytics</h3>
+
             <p>
-              A virtual experience involving a Tableau telemetry
-              dashboard and an employee compensation equality
+              A Forage virtual experience involving a Tableau
+              telemetry dashboard to explore equipment downtime
+              and an Excel-based employee compensation equality
               classification exercise.
             </p>
+
             <div class="tags">
               <span class="tag">Tableau</span>
               <span class="tag">Excel</span>
-              <span class="tag">Data Interpretation</span>
+              <span class="tag">Data Visualization</span>
+              <span class="tag">Classification</span>
             </div>
-            <a class="project-link" href="#contact">Add repository link →</a>
+
+            <a
+              class="project-link"
+              href="https://github.com/Devika-M102/deloitte-data-analytics"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Project on GitHub ↗
+            </a>
+
           </article>
+
         </div>
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact">
       <div class="container">
+
         <div class="contact-panel">
+
           <h2 class="section-heading">Let's Connect</h2>
+
           <p>
-            I'm interested in entry-level opportunities in data analytics
-            and business analysis where I can keep learning and contribute
-            through structured analysis and problem-solving.
+            I'm interested in entry-level opportunities in data
+            analytics and business analysis where I can apply my
+            analytical thinking, develop practical skills, and
+            contribute to solving business problems.
           </p>
+
           <div class="contact-links">
-            <a href="https://github.com/Devika-M102" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-            <a href="https://www.linkedin.com/in/devikamini" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-            <!-- Add your professional email address here when ready. -->
+
+            <a
+              href="https://github.com/Devika-M102"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub ↗
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/devikamini"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn ↗
+            </a>
+
           </div>
+
         </div>
       </div>
     </section>
+
   </main>
 
   <footer>
